@@ -1,6 +1,6 @@
-% Designing EDM Spotlights Voting System
+% Report Name
 % Garrett Everding
-% December 21, 2012
+% Month, Day, Year
 
 # Introduction #
 
