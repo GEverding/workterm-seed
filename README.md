@@ -20,10 +20,10 @@ Refer to [Markdown][4] or [Pandoc][2] with any specific markdonw questions.
 
 ### Citations
 I am using [CSL][1] and a BibTex Database for references.
-References can be added to `src/bib/references.bib`.  You can use `src/bib/IEEEexample.bib' 
+References can be added to ```src/bib/references.bib```.  You can use ```src/bib/IEEEexample.bib```
 as a reference guide.  
 
-To cite a reference you use [CSL][1]'s notation.  For examples refer [here][3]
+To cite a reference you use [CSL][1]'s notation.  For examples refer [here][3].
 
 [1]: http://citationstyles.org/ 
 [2]: http://johnmacfarlane.net/pandoc/index.html
