@@ -1,0 +1,101 @@
+\documentclass[12pt,]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+    \setmainfont{Georgia}
+    \setsansfont{Arial}
+    \setmonofont{Bitstream Vera Sans Mono}
+\fi
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\lhead{\itshape Designing EDM Spotlights Voting System}
+\chead{}
+\rhead{\itshape{\nouppercase{\leftmark}}}
+\lfoot{v 0.1}
+\cfoot{}
+\rfoot{\thepage}
+
+\usepackage{listings}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Garrett Everding},
+            pdftitle={Designing EDM Spotlights Voting System},
+            colorlinks=true,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+\title{Designing EDM Spotlights Voting System}
+\author{Garrett Everding}
+\date{December 21, 2012}
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+\pagebreak
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+{
+\hypersetup{linkcolor=black}
+\tableofcontents
+\pagebreak
+
+\listoffigures
+\pagebreak
+}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\section{Introduction}
+
+Hello World {[}1{]}.
+
+\section{Another Section}
+
+\begin{lstlisting}
+function amazing(buffer, cb) {
+  console.log(buffer);
+  cb(null);
+}
+\end{lstlisting}
+
+\subsection{Sub Section}
+
+\section{Another Section}
+
+\pagebreak
+
+\section{References}
+
+{[}1{]} J. Doe, ``Article,'' \emph{Journal of Generic Studies}, vol. 6,
+pp. 33--34, 2006.
+
+\end{document}
