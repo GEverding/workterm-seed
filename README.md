@@ -25,6 +25,9 @@ as a reference guide.
 
 To cite a reference you use [CSL][1]'s notation.  For examples refer [here][3].
 
+## TODO
+* Make Complient with UW Style Guide
+
 [1]: http://citationstyles.org/ 
 [2]: http://johnmacfarlane.net/pandoc/index.html
 [3]: http://johnmacfarlane.net/pandoc/demos.html
