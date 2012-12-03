@@ -186,6 +186,8 @@ $endif$
 
 $if(toc)$
 \renewcommand{\contentsname}{Table of Contents}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 $endif$
 
 \begin{document}
