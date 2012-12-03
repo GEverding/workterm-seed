@@ -5,10 +5,32 @@ really give it a look.
 
 ## Install
 1. Latex
-2. [Haskell](http://www.haskell.org/platform/)
+2. [Haskell][5]
 3. [Pandoc][2]
+4. [redo][https://github.com/apenwarr/redo]
 
 ## Build
+
+### Haskell
+Follow System Specific Instructions [here][5]
+
+### Pandoc
+**After installing Haskell**
+
+```sh
+cabal update
+cabal install pandoc
+```
+
+### redo
+```sh
+$ git clone git://github.com/apenwarr/redo.git
+$ cd redo
+$ make
+$ sudo make install
+```
+
+### Project
 ```sh
 $ git clone git@github.com:GEverding/workterm-seed.git awesome-report
 $ cd awesome-report
@@ -32,3 +54,4 @@ To cite a reference you use [CSL][1]'s notation.  For examples refer [here][3].
 [2]: http://johnmacfarlane.net/pandoc/index.html
 [3]: http://johnmacfarlane.net/pandoc/demos.html
 [4]: http://daringfireball.net/projects/markdown/
+[5]: http://www.haskell.org/platform/

@@ -232,6 +232,7 @@ $endif$
 \pagenumbering{arabic}
 $body$
 
+
 $if(natbib)$
 $if(biblio-files)$
 $if(biblio-title)$
@@ -242,13 +243,15 @@ $else$
 $endif$
 $endif$
 
-\bibliography{$biblio-files$}
-
 $endif$
 $endif$
 $if(biblatex)$
-\pagebreak
+
+\begin{singlespacing}
+\clearpage
+\hypersetup{linkcolor=black}
 \printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+\end{singlespacing}
 
 $endif$
 $for(include-after)$

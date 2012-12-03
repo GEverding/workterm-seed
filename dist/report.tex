@@ -1,0 +1,206 @@
+\documentclass[11pt,]{article}
+
+% Set spacing to 1.5
+\usepackage{ifthen}
+\usepackage{textcase}
+
+\usepackage{setspace}\onehalfspacing
+% Set height b/w paragraphs to 1 space, or the height of 'x'
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+% use microtype if available
+\IfFileExists{microtype.sty}{\usepackage{microtype}}{}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[utf8]{inputenc}
+
+\else % if luatex or xelatex
+  \usepackage{fontspec}
+  \ifxetex
+    \usepackage{xltxtra,xunicode}
+  \fi
+  \defaultfontfeatures{Mapping=tex-text,Scale=MatchLowercase}
+  \newcommand{\euro}{€}
+    \setmainfont{Georgia}
+    \setsansfont{Arial}
+    \setmonofont{Bitstream Vera Sans Mono}
+\fi
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\pagenumbering{arabic}
+\lhead{\itshape Report Name}
+\chead{}
+\rhead{\itshape{\nouppercase{\leftmark}}}
+\lfoot{v 0.1}
+\cfoot{}
+\rfoot{\thepage}
+
+
+\usepackage{biblatex}
+\addbibresource{/home/garrett/Dropbox/2B/report/src/bib/references}
+\ifxetex
+  \usepackage[setpagesize=false, % page size defined by xetex
+              unicode=false, % unicode breaks when used with xetex
+              xetex]{hyperref}
+\else
+  \usepackage[unicode=true]{hyperref}
+\fi
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Garrett Everding},
+            pdftitle={Report Name},
+            colorlinks=true,
+            urlcolor=blue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+%\setlength{\parskip{1ex}}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+
+
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+  \begin{singlespacing}
+  \let\footnotesize\small
+  \let\footnoterule\relax
+  \let\footnote\thanks
+  \begin{center}
+    {\large \MakeTextUppercase{University of Waterloo} \par Electrical \& Computer Engineering}%
+  \end{center}
+  \null\vfill
+  \begin{center}
+      {\LARGE  \par}{\huge \MakeTextUppercase{Report Name} \par}%
+  \end{center}\par
+  \null\vfill
+  \begin{center}
+    {\large ACME Corp.\\ 123 Fake St. Waterloo, ON.}
+  \end{center}\par
+  \null\vfill
+  \begin{center}
+    \large Prepared by\\
+      \begin{tabular}[t]{c}
+        Garrett Everding \\
+          ID 203XXXXX \\ userid@uwaterloo.ca\\ NX Computer Engineering
+      \end{tabular}
+      \par
+    \date{Month, Day, Year}
+  \end{center}
+  \end{singlespacing}
+  \end{titlepage}
+}
+
+\renewcommand{\contentsname}{Table of Contents}
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\begin{document}
+
+\maketitle
+\thispagestyle{empty}
+
+\setcounter{page}{1}
+\pagenumbering{roman}
+
+\singlespacing
+
+200 University Avenue West \\
+Waterloo, Ontario, Canada \\
+N2L 3G1 
+
+\today 
+
+\emph{Chair Name}, chair \\
+Electrical and Computer Engineering \\
+University of Waterloo \\
+Waterloo, Ontario \\
+N2L 3G1  
+
+Dear Sir:  
+
+This report, entitled \emph{$title$}, was prepared as my \emph{NA} Work Report for the University of Waterloo . This report is in fulfilment of the course WKRPT 101 . The purpose of this report is to demonstrate \emph{some cool thing}.  
+
+\emph{Paragraph about the Objectives of your employer}
+
+\emph{Paragraph about the objectives of the team/project you work on}
+
+\emph{Appropriate Acknowledgements here}.  I hereby confirm that I have received no further help other than what is mentioned above in writing this report. I also confirm this report has not been previously submitted for academic credit at this or any other academic institution.
+
+\vspace*{0.25in}
+
+Sincerely,
+
+\vspace*{0.75in}
+
+Garrett Everding \\
+Student ID: 203\emph{XXXXX}
+
+
+\onehalfspacing
+\clearpage
+
+
+
+\section*{Contributions}
+\addcontentsline{toc}{section}{Contributions}
+
+\emph{Refer to the example report for what goes here}
+
+\pagebreak
+
+
+\section*{Summary}
+\addcontentsline{toc}{section}{Summary}
+
+Put some cool stuff in here
+
+\pagebreak
+
+
+{
+
+\clearpage
+\hypersetup{linkcolor=black}
+
+\begin{singlespacing}{%
+\setlength{\parskip}{0pt}
+
+\tableofcontents
+
+\clearpage
+\listoffigures
+\addcontentsline{toc}{section}{List of Figures}
+\pagebreak
+
+\clearpage
+\listoftables
+\addcontentsline{toc}{section}{List of Tables}
+\pagebreak
+}
+\end{singlespacing}
+
+}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+\section{Introduction}
+
+\cite{example}
+
+
+
+\begin{singlespacing}
+\clearpage
+\hypersetup{linkcolor=black}
+\printbibliography
+\end{singlespacing}
+
+\section*{Appendix}
+\addcontentsline{toc}{section}{Appendix}
+
+\end{document}
+

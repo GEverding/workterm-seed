@@ -4,8 +4,5 @@
 
 # Introduction #
 
-\clearpage
-
-# References #
-
+\cite{example}
 
