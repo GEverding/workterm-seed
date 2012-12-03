@@ -1,4 +1,12 @@
 \documentclass[$if(fontsize)$$fontsize$,$endif$$if(lang)$$lang$,$endif$]{$documentclass$}
+
+% Set spacing to 1.5
+\usepackage{ifthen}
+\usepackage{textcase}
+
+\usepackage{setspace}\onehalfspacing
+% Set height b/w paragraphs to 1 space, or the height of 'x'
+
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{amssymb,amsmath}
@@ -44,8 +52,10 @@ $endif$
 \rfoot{\thepage}
 
 $if(geometry)$
-\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+%\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+\usepackage[left=1.5in,top=1in,right=1in,bottom=1in]{geometry}
 $endif$
+
 $if(natbib)$
 \usepackage{natbib}
 \bibliographystyle{plainnat}
@@ -119,6 +129,7 @@ $if(strikeout)$
 $endif$
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{6pt plus 2pt minus 1pt}
+%\setlength{\parskip{1ex}}
 \setlength{\emergencystretch}{3em}  % prevent overfull lines
 $if(numbersections)$
 $else$
@@ -139,18 +150,44 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
+
 $if(title)$
-\title{$title$}
+\renewcommand{\maketitle}{%
+  \begin{titlepage}
+  \begin{singlespacing}
+  \let\footnotesize\small
+  \let\footnoterule\relax
+  \let\footnote\thanks
+  \begin{center}
+    {\large \MakeTextUppercase{University of Waterloo} \par Electrical \& Computer Engineering}%
+  \end{center}
+  \null\vfill
+  \begin{center}
+      {\LARGE  \par}{\huge \MakeTextUppercase{$title$} \par}%
+  \end{center}\par
+  \null\vfill
+  \begin{center}
+    {\large ACME Corp.\\ 123 Fake St. Waterloo, ON.}
+  \end{center}\par
+  \null\vfill
+  \begin{center}
+    \large Prepared by\\
+      \begin{tabular}[t]{c}
+        $for(author)$$author$$sep$ \and $endfor$ \\
+          ID 203XXXXX \\ userid@uwaterloo.ca\\ NX Computer Engineering
+      \end{tabular}
+      \par
+    \date{$date$}
+  \end{center}
+  \end{singlespacing}
+  \end{titlepage}
+}
 $endif$
-\author{$for(author)$$author$$sep$ \and $endfor$}
-\date{$date$}
 
 \begin{document}
-$if(title)$
+
 \maketitle
 \thispagestyle{empty}
-\pagebreak
-$endif$
 
 \setcounter{page}{1}
 \pagenumbering{roman}
