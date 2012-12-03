@@ -184,6 +184,10 @@ $if(title)$
 }
 $endif$
 
+$if(toc)$
+\renewcommand{\contentsname}{Table of Contents}
+$endif$
+
 \begin{document}
 
 \maketitle
@@ -198,17 +202,26 @@ $include-before$
 $endfor$
 $if(toc)$
 {
-\hypersetup{linkcolor=black}
-\tableofcontents
-\pagebreak
 
+\clearpage
+\hypersetup{linkcolor=black}
+
+\begin{singlespacing}{%
+\setlength{\parskip}{0pt}
+
+\tableofcontents
+
+\clearpage
 \listoffigures
 \addcontentsline{toc}{section}{List of Figures}
 \pagebreak
 
+\clearpage
 \listoftables
 \addcontentsline{toc}{section}{List of Tables}
 \pagebreak
+}
+\end{singlespacing}
 
 }
 $endif$
@@ -241,3 +254,4 @@ $include-after$
 
 $endfor$
 \end{document}
+
