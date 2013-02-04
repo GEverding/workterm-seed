@@ -7,7 +7,7 @@ really give it a look.
 1. Latex
 2. [Haskell][5]
 3. [Pandoc][2]
-4. [redo][https://github.com/apenwarr/redo]
+4. [redo][6]
 
 ## Build
 
@@ -52,3 +52,4 @@ Use your standard latex citations
 [3]: http://johnmacfarlane.net/pandoc/demos.html
 [4]: http://daringfireball.net/projects/markdown/
 [5]: http://www.haskell.org/platform/
+[6]: https://github.com/apenwarr/redo
