@@ -62,7 +62,7 @@ $if(natbib)$
 \bibliographystyle{plainnat}
 $endif$
 $if(biblatex)$
-\usepackage{biblatex}
+\usepackage[style=ieee, backend=biber, natbib=true, url=false]{biblatex}
 $if(biblio-files)$
 \addbibresource{$biblio-files$}
 $endif$
