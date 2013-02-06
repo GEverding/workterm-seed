@@ -15,7 +15,7 @@ $ sudo apt-get install texlive-full
 
 ### Biber ###
 1. Download the current version of Biber from [here](http://biblatex-biber.sourceforge.net/)
-2. Drop it into ```/usr/bin```
+2. Extract and Drop it into ```/usr/bin```
 
 ### Biblatex ###
 1. Download the current version of Biblatex from [here](http://sourceforge.net/projects/biblatex/)
@@ -47,6 +47,9 @@ $ sudo make install
 ```
 
 ## Windows ##
+TODO
+
+## OSX ##
 TODO
 
 # Build #
